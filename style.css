@@ -3,33 +3,81 @@
     padding: 0;
 }
 #wrapper {
-    background-color: #080c1a;
+    position: relative;
+    background-color: #003300;
     width: 100vw;
     height: 100vh;
-    color: #ffffff;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'VT323';
 }
 #title {
     text-align: center;
     padding: .5em;
-    color: white;
-    text-decoration: none;
+    font-size: 5em;
+    color: greenyellow;
 }
 #subtitle {
     text-align: center;
     padding-bottom: .5em;
-    font-size: 3em;
-    color: #707070;
+    font-size: 4em;
+    color: greenyellow;
 }
 #content {
     text-align: center;
-    padding: 2em;
+    padding: 4em;
+}
+#scanlines, #bezel {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+#scanlines {
+    opacity: 75%;
 }
 li {
     list-style: none;
 }
 a {
-    color: white;
+    color: greenyellow;
     text-decoration: none;
     font-size: 2em;
+}
+.glow {
+    -webkit-animation: 0.01s linear 0s infinite alternate running glow;
+    -moz-animation: 0.01s linear 0s infinite alternate running glow;
+    animation: 0.01s linear 0s infinite alternate running glow;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 .2em greenyellow, 0 0 .3em greenyellow, 0 0 .5em greenyellow;
+    }
+    to {
+        text-shadow: 0 0 .2em rgba(172, 255, 47, 0.822), 0 0 .3em rgba(172, 255, 47, 0.822), 0 0 .5em rgba(172, 255, 47, 0.822);
+    }
+}
+@-webkit-keyframes glow {
+    from {
+        text-shadow: -.1em -.2em .2em greenyellow, .1em -.2em .3em greenyellow, 0 .2em .5em greenyellow;
+    }
+    to {
+        text-shadow: -.05em -.15em .2em greenyellow, .2em -.15em .3em greenyellow, .1em .15em .5em greenyellow;
+    }
+}
+@-moz-keyframes glow {
+    from {
+        text-shadow: -.1em -.2em .2em greenyellow, .1em -.2em .3em greenyellow, 0 .2em .5em greenyellow;
+    }
+    to {
+        text-shadow: -.05em -.15em .2em greenyellow, .2em -.15em .3em greenyellow, .1em .15em .5em greenyellow;
+    }
 }
