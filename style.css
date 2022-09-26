@@ -17,8 +17,13 @@
 }
 #subtitle {
     text-align: center;
-    padding-bottom: .5em;
     font-size: 4em;
+    color: greenyellow;
+}
+#author {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 1.5em;
     color: greenyellow;
 }
 #content {
